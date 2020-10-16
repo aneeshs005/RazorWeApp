@@ -1,0 +1,22 @@
+@page
+@{
+    Layout = "BMSLayout";
+}
+@model BookMyShowModel
+@{
+    ViewData["Title"] = "Book Movies";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome-BookMyshow Events</h1>
+    <p>Book for all the movies in your city</p>
+    <a href="/BookMyShow/Movies/HindiMovies">
+        <button type="button" class="btn btn-primary">Hindi</button>
+    </a>
+    <a href="/BookMyShow/Movies/MalayalamMovies">
+        <button type="button" class="btn btn-secondary">Malayalam</button>
+    </a>
+    <a href="/BookMyShow/Movies/TamilMovies">
+        <button type="button" class="btn btn-success">Tamil</button>
+    </a>
+</div>
