@@ -1,0 +1,43 @@
+@page "/BookMyShow/Add"
+@{
+    Layout = "BMSLayout";
+}
+@model AddIndex
+@{
+    ViewData["Title"] = "Add Movies";
+}
+<body>
+
+    <div class="text-center">
+        <h1 class="display-4">Add Movies</h1>
+        <form class="form-horizontal" method="post">
+            <div class="form-group">
+                <label for="Name" class="col-sm-2 control-label">Movie Name</label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" name="Name" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="Synopsis" class="col-sm-2 control-label">Movie Description</label>
+                <div class="col-sm-6">
+                    <textarea type="text" class="form-control" name="Synopsis" rows="5" required></textarea>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="Year" class="col-sm-2 control-label">Release Year</label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" name="Year" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-6">
+                    <button type="submit" class="btn btn-default">Submit</button>
+                </div>
+            </div>
+            @if(Model.count>0)
+            {
+                <label>Movie submited</label>
+            }
+        </form>
+    </div>
+</body>
